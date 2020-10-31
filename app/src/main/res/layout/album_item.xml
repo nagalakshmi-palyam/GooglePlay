@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    android:id="@+id/cardview"
+    android:layout_marginLeft="5dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:background="@drawable/img"
+        android:id="@+id/movieposter"
+        android:src="@drawable/shiv"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:clickable="false"
+        android:layout_height="150dp" />
+        <LinearLayout
+            android:background="#E0E0E0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            android:background="@android:color/transparent"
+            android:id="@+id/moviename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="5dp"
+            android:text="AlaVaikuntapuramlo" />
+            <ImageView
+                android:layout_marginLeft="400dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

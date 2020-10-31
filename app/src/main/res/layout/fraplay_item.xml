@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_height="wrap_content">
+   <LinearLayout
+       android:background="#ffffff"
+       android:id="@+id/llid"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/songs_cover_one"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/nenulocal" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="202dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+       >
+        <TextView
+            android:id="@+id/songs_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:lines="1"
+            android:text="Havana (Camila Cabello song)"
+            android:textColor="@color/tectColor"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="15dp" />
+        <TextView
+            android:id="@+id/songs_artist_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="Camila Cabello" />
+
+    </LinearLayout>
+
+   </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>
