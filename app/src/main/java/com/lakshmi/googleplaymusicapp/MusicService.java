@@ -28,7 +28,7 @@ public class MusicService extends Service  implements LooperPreparedListener  {
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.d("Lloyd", "onCreate of music service");
+        Log.d("Lakshmi", "onCreate of music service");
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             showNotificationAndStartForeGround();
         } else {
@@ -39,7 +39,7 @@ public class MusicService extends Service  implements LooperPreparedListener  {
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
-        Log.d("Lloyd", "on bind");
+        Log.d("Lakshmi", "on bind");
         handlerThread = new BackgroundHandlerThread("Music Service", this);
         handlerThread.start();
      mediaPlayer = MediaPlayer.create(this,R.raw.arereekkada);
@@ -51,7 +51,7 @@ public class MusicService extends Service  implements LooperPreparedListener  {
             handlerThread.addTaskToQueue(new Runnable() {
                 @Override
                 public void run() {
-                    Log.d("Lloyd", "Thread name" + Thread.currentThread().getName());
+                    Log.d("Lakshmi", "Thread name" + Thread.currentThread().getName());
                     mediaPlayer.start();
                 }
             });
@@ -63,7 +63,7 @@ public class MusicService extends Service  implements LooperPreparedListener  {
             handlerThread.addTaskToQueue(new Runnable() {
                 @Override
                 public void run() {
-                    Log.d("Lloyd", "Thread name" + Thread.currentThread().getName());
+                    Log.d("Lakshmi", "Thread name" + Thread.currentThread().getName());
 
                     mediaPlayer.pause();
                 }
@@ -76,7 +76,7 @@ public class MusicService extends Service  implements LooperPreparedListener  {
             handlerThread.addTaskToQueue(new Runnable() {
                 @Override
                 public void run() {
-                    Log.d("Lloyd", "Thread name" + Thread.currentThread().getName());
+                    Log.d("Lakshmi", "Thread name" + Thread.currentThread().getName());
 
                     mediaPlayer.pause();
                     mediaPlayer.release();
@@ -87,7 +87,7 @@ public class MusicService extends Service  implements LooperPreparedListener  {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d("Lloyd", "onDestroy of music service");
+        Log.d("Lakshmi", "onDestroy of music service");
        // mediaPlayer.release();
 
     }
