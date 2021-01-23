@@ -19,7 +19,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 
-public class MusicService extends Service  implements LooperPreparedListener  {
+public class MusicService extends Service implements LooperPreparedListener{
     private MusicServiceBinder binder = new MusicServiceBinder();
     private BackgroundHandlerThread handlerThread;
     private MediaPlayer mediaPlayer;
@@ -40,7 +40,7 @@ public class MusicService extends Service  implements LooperPreparedListener  {
     @Override
     public IBinder onBind(Intent intent) {
         Log.d("Lakshmi", "on bind");
-        handlerThread = new BackgroundHandlerThread("Music Service", this);
+        handlerThread = new BackgroundHandlerThread("Music Service",this );
         handlerThread.start();
      mediaPlayer = MediaPlayer.create(this,R.raw.arereekkada);
 
@@ -91,7 +91,9 @@ public class MusicService extends Service  implements LooperPreparedListener  {
        // mediaPlayer.release();
 
     }
-    @Override
+
+
+        @Override
     public void onLooperReady() {
         isLooperReady = true;
     }
@@ -130,5 +132,6 @@ public class MusicService extends Service  implements LooperPreparedListener  {
                 .build();
         startForeground(2, notification);
     }
+
 
 }

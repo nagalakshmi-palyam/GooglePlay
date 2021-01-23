@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements FragmentClickList
         if(isServiceBound){
             pause.setVisibility(View.GONE);
             play.setVisibility(View.VISIBLE);
-            musicService.releasePlayer();
+           musicService.releasePlayer();
         }
         intent.putExtra("songsid",movie.getInt("song"));
         startService(intent);
